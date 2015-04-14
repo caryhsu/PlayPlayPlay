@@ -36,10 +36,10 @@
             this.portToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.messageToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.pauseTimer = new System.Windows.Forms.Timer(this.components);
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.checkPumpTimer = new System.Windows.Forms.Timer(this.components);
+            this.serialPortStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
@@ -83,7 +83,7 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.messageToolStripStatusLabel,
-            this.toolStripProgressBar1});
+            this.serialPortStripStatusLabel});
             this.statusStrip1.Location = new System.Drawing.Point(0, 311);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(456, 22);
@@ -93,14 +93,9 @@
             // messageToolStripStatusLabel
             // 
             this.messageToolStripStatusLabel.Name = "messageToolStripStatusLabel";
-            this.messageToolStripStatusLabel.Size = new System.Drawing.Size(339, 17);
+            this.messageToolStripStatusLabel.Size = new System.Drawing.Size(310, 17);
             this.messageToolStripStatusLabel.Spring = true;
             this.messageToolStripStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // toolStripProgressBar1
-            // 
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
             // 
             // pauseTimer
             // 
@@ -122,6 +117,12 @@
             this.checkPumpTimer.Enabled = true;
             this.checkPumpTimer.Interval = 10;
             this.checkPumpTimer.Tick += new System.EventHandler(this.checkPumpTimer_Tick);
+            // 
+            // serialPortStripStatusLabel
+            // 
+            this.serialPortStripStatusLabel.AutoSize = false;
+            this.serialPortStripStatusLabel.Name = "serialPortStripStatusLabel";
+            this.serialPortStripStatusLabel.Size = new System.Drawing.Size(100, 17);
             // 
             // MainForm
             // 
@@ -151,11 +152,11 @@
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel messageToolStripStatusLabel;
-        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         private System.Windows.Forms.Timer pauseTimer;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private System.Windows.Forms.Timer checkPumpTimer;
         private System.Windows.Forms.ToolStripMenuItem portToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel serialPortStripStatusLabel;
     }
 }
 

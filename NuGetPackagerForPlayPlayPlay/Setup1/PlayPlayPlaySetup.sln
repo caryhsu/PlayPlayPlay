@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "PlayPlayPlaySetup", "Setup1\PlayPlayPlaySetup.isproj", "{923F6D17-534E-47AC-8093-93EA367AF9BC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D0A78DEA-23E2-46C0-A8D6-BC0D7A9C5A3C} = {D0A78DEA-23E2-46C0-A8D6-BC0D7A9C5A3C}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayPlayPlay", "..\..\MediaPlayer\PlayPlayPlay\PlayPlayPlay.csproj", "{D0A78DEA-23E2-46C0-A8D6-BC0D7A9C5A3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CD_ROM|Any CPU = CD_ROM|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		DVD-5|Any CPU = DVD-5|Any CPU
+		Release|Any CPU = Release|Any CPU
+		SingleImage|Any CPU = SingleImage|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{923F6D17-534E-47AC-8093-93EA367AF9BC}.CD_ROM|Any CPU.ActiveCfg = CD_ROM
+		{923F6D17-534E-47AC-8093-93EA367AF9BC}.CD_ROM|Any CPU.Build.0 = CD_ROM
+		{923F6D17-534E-47AC-8093-93EA367AF9BC}.Debug|Any CPU.ActiveCfg = DVD-5
+		{923F6D17-534E-47AC-8093-93EA367AF9BC}.Debug|Any CPU.Build.0 = DVD-5
+		{923F6D17-534E-47AC-8093-93EA367AF9BC}.DVD-5|Any CPU.ActiveCfg = DVD-5
+		{923F6D17-534E-47AC-8093-93EA367AF9BC}.DVD-5|Any CPU.Build.0 = DVD-5
+		{923F6D17-534E-47AC-8093-93EA367AF9BC}.Release|Any CPU.ActiveCfg = SingleImage
+		{923F6D17-534E-47AC-8093-93EA367AF9BC}.Release|Any CPU.Build.0 = SingleImage
+		{923F6D17-534E-47AC-8093-93EA367AF9BC}.SingleImage|Any CPU.ActiveCfg = SingleImage
+		{923F6D17-534E-47AC-8093-93EA367AF9BC}.SingleImage|Any CPU.Build.0 = SingleImage
+		{D0A78DEA-23E2-46C0-A8D6-BC0D7A9C5A3C}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{D0A78DEA-23E2-46C0-A8D6-BC0D7A9C5A3C}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{D0A78DEA-23E2-46C0-A8D6-BC0D7A9C5A3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0A78DEA-23E2-46C0-A8D6-BC0D7A9C5A3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0A78DEA-23E2-46C0-A8D6-BC0D7A9C5A3C}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0A78DEA-23E2-46C0-A8D6-BC0D7A9C5A3C}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{D0A78DEA-23E2-46C0-A8D6-BC0D7A9C5A3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0A78DEA-23E2-46C0-A8D6-BC0D7A9C5A3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0A78DEA-23E2-46C0-A8D6-BC0D7A9C5A3C}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{D0A78DEA-23E2-46C0-A8D6-BC0D7A9C5A3C}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

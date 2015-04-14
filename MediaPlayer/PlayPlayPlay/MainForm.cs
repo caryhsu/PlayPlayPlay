@@ -65,6 +65,7 @@ namespace PlayPlayPlay
                 foreach (string s in tList)
                 {
                     mySerialPorts.Add(s);
+                    Console.WriteLine(s);
                 }
             }
             if (!ListEquals(this.serialPorts, mySerialPorts))
@@ -133,23 +134,57 @@ namespace PlayPlayPlay
 
         private void initMySerialPort(ToolStripMenuItem item)
         {
-            this.mySerialPort = new SerialPort("COM4");
-            this.mySerialPort.BaudRate = 9600;
-            this.mySerialPort.Parity = Parity.None;
-            this.mySerialPort.StopBits = StopBits.One;
-            this.mySerialPort.DataBits = 8;
-            this.mySerialPort.Handshake = Handshake.None;
-            this.mySerialPort.ReadBufferSize = 1024000;
+            if (this.mySerialPort != null)
+            {
+                tryToCloseMySerialPort();
+            }
 
+            if (item.Checked)
+            {
+                String serialPortName = item.Text.Split('-')[0].Trim();
+                this.mySerialPort = new SerialPort(serialPortName);
+                this.mySerialPort.BaudRate = 9600;
+                this.mySerialPort.Parity = Parity.None;
+                this.mySerialPort.StopBits = StopBits.One;
+                this.mySerialPort.DataBits = 8;
+                this.mySerialPort.Handshake = Handshake.None;
+                this.mySerialPort.ReadBufferSize = 1024000;
+
+                try
+                {
+                    this.mySerialPort.Open();
+                }
+                catch (Exception ex)
+                {
+                    item.Checked = false;
+                    this.mySerialPort = null;
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                tryToCloseMySerialPort();
+            }
+
+            if (this.mySerialPort == null)
+            {
+                this.serialPortStripStatusLabel.Text = "";
+            }
+            else
+            {
+                this.serialPortStripStatusLabel.Text = this.mySerialPort.PortName;
+            }
+        }
+
+        private void tryToCloseMySerialPort()
+        {
             try
             {
-                this.mySerialPort.Open();
+                this.mySerialPort.Close();
             }
-            catch (Exception ex)
+            catch(Exception)
             {
-                item.Checked = false;
-                this.mySerialPort = null;
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // ignore exception
             }
         }
 
